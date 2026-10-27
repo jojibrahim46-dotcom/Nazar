@@ -1,172 +1,171 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#0a0a0a">
-<title>نزار عبدالفراج إدريس ابراهيم | بطاقة عمل</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>قارئ QR للأسماء والأرقام</title>
 <style>
-:root{
-  --black:#0a0a0a; --black-2:#141210; --gold:#d4af37; --gold-light:#f3e2a0; --gold-dark:#8a6d1b;
-  --text:#f5ecd0; --muted:#b9a76a;
-  --gold-grad:linear-gradient(135deg,#8a6d1b 0%,#d4af37 30%,#f3e2a0 50%,#d4af37 70%,#8a6d1b 100%);
-}
-*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
-html,body{min-height:100%}
-body{
-  font-family:'Tajawal','Segoe UI',Tahoma,Arial,sans-serif;
-  background:radial-gradient(ellipse at 50% 0%,#241c08 0%,var(--black) 60%) fixed;
-  color:var(--text);
-  display:flex;align-items:center;justify-content:center;
-  padding:max(20px,env(safe-area-inset-top)) 16px max(20px,env(safe-area-inset-bottom));
-}
-.card{
-  width:100%;max-width:440px;position:relative;
-  background:linear-gradient(160deg,var(--black-2),var(--black));
-  border-radius:24px;padding:40px 28px 32px;text-align:center;
-  border:1px solid rgba(212,175,55,.45);
-  box-shadow:0 30px 80px rgba(0,0,0,.7),0 0 0 6px rgba(212,175,55,.06),inset 0 0 60px rgba(212,175,55,.05);
-  overflow:hidden;
-}
-.card::before{ /* inner frame */
-  content:"";position:absolute;inset:10px;border-radius:16px;
-  border:1px solid rgba(212,175,55,.25);pointer-events:none;
-}
-.card::after{ /* shine */
-  content:"";position:absolute;top:-60%;left:-40%;width:60%;height:220%;
-  background:linear-gradient(90deg,transparent,rgba(243,226,160,.07),transparent);
-  transform:rotate(20deg);animation:shine 7s ease-in-out infinite;pointer-events:none;
-}
-@keyframes shine{0%{left:-60%}55%,100%{left:130%}}
-.monogram{
-  width:96px;height:96px;margin:0 auto 22px;border-radius:50%;
-  background:var(--gold-grad);padding:3px;
-  box-shadow:0 0 30px rgba(212,175,55,.35);
-}
-.monogram span{
-  width:100%;height:100%;border-radius:50%;background:var(--black);
-  display:flex;align-items:center;justify-content:center;
-  font-size:46px;font-weight:800;
-  background-image:var(--gold-grad);-webkit-background-clip:text;background-clip:text;color:transparent;
-  background-color:var(--black);
-}
-.monogram span{background:var(--black);position:relative}
-.monogram span b{
-  background:var(--gold-grad);-webkit-background-clip:text;background-clip:text;color:transparent;
-  font-weight:800;line-height:1;
-}
-h1{
-  font-size:clamp(22px,6vw,28px);font-weight:800;line-height:1.5;
-  background:var(--gold-grad);-webkit-background-clip:text;background-clip:text;color:transparent;
-}
-.divider{
-  display:flex;align-items:center;gap:12px;margin:20px auto 26px;max-width:220px;
-}
-.divider i{flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
-.divider em{width:8px;height:8px;background:var(--gold);transform:rotate(45deg);display:block}
-.row{
-  display:flex;align-items:center;gap:14px;text-decoration:none;color:var(--text);
-  padding:14px 16px;margin-bottom:12px;border-radius:14px;text-align:right;
-  background:rgba(212,175,55,.05);border:1px solid rgba(212,175,55,.25);
-  transition:transform .2s,border-color .2s,background .2s;
-}
-.row:hover,.row:focus-visible{transform:translateY(-2px);border-color:var(--gold);background:rgba(212,175,55,.1);outline:none}
-.ico{
-  flex:0 0 44px;height:44px;border-radius:12px;background:var(--gold-grad);
-  display:flex;align-items:center;justify-content:center;
-}
-.ico svg{width:22px;height:22px;fill:var(--black)}
-.info{min-width:0;flex:1}
-.info small{display:block;color:var(--muted);font-size:13px;margin-bottom:2px}
-.info strong{display:block;font-size:17px;font-weight:700;direction:ltr;text-align:right;overflow-wrap:anywhere}
-.save{
-  width:100%;margin-top:14px;padding:16px;border:0;border-radius:14px;cursor:pointer;
-  font-family:inherit;font-size:18px;font-weight:800;color:var(--black);
-  background:var(--gold-grad);background-size:200% 100%;
-  display:flex;align-items:center;justify-content:center;gap:10px;
-  box-shadow:0 10px 30px rgba(212,175,55,.3);
-  transition:transform .2s,background-position .6s,box-shadow .2s;
-}
-.save:hover,.save:focus-visible{background-position:100% 0;transform:translateY(-2px);box-shadow:0 14px 36px rgba(212,175,55,.45);outline:none}
-.save:active{transform:scale(.98)}
-.save svg{width:22px;height:22px;fill:var(--black)}
-.toast{
-  min-height:22px;margin-top:12px;font-size:14px;color:var(--gold-light);opacity:0;transition:opacity .3s;
-}
-.toast.show{opacity:1}
-@media (max-width:380px){
-  .card{padding:34px 18px 26px}
-  .info strong{font-size:15px}
-}
-@media (min-width:768px){ .card{padding:48px 40px 38px} }
-@media (prefers-reduced-motion:reduce){ .card::after{animation:none} *{transition:none!important} }
+:root{--bg:#f3f6f8;--card:#fff;--ink:#17212b;--muted:#637381;--accent:#087f5b;--accent2:#075e46;--line:#dce4e8;--gold:#d7b56d}
+*{box-sizing:border-box}body{margin:0;font-family:Tahoma,Arial,sans-serif;background:linear-gradient(135deg,#eef3f4,#f8f6ef);color:var(--ink);padding:18px}
+main{max-width:980px;margin:auto}.hero{background:#101c22;color:white;padding:24px;border-radius:20px;box-shadow:0 12px 35px #13232a20;border-bottom:4px solid var(--gold)}
+h1{margin:0 0 8px;font-size:clamp(22px,4vw,32px)}.hero p{margin:0;color:#d7e1e5;line-height:1.8}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:16px;margin-top:16px}.card{background:var(--card);padding:18px;border:1px solid var(--line);border-radius:16px;box-shadow:0 5px 20px #13232a0b}
+h2{font-size:19px;margin:0 0 14px}.hint{font-size:13px;color:var(--muted);line-height:1.7}
+button,.filelabel{border:0;border-radius:10px;padding:12px 15px;font-size:15px;font-weight:bold;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:8px}
+.primary{background:var(--accent);color:#fff}.primary:hover{background:var(--accent2)}.secondary{background:#e8efed;color:#173a31}.danger{background:#fff0f0;color:#9b2222}
+.actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+#reader{width:100%;overflow:hidden;border-radius:12px;background:#101820;min-height:80px}label{display:block;font-weight:bold;margin:12px 0 6px}input,textarea{width:100%;padding:12px;border:1px solid #cbd6dc;border-radius:10px;font:inherit;background:#fff}textarea{min-height:90px;resize:vertical}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:10px}@media(max-width:480px){.row{grid-template-columns:1fr}}
+.status{margin-top:10px;padding:10px 12px;border-radius:9px;background:#edf5f2;color:#235847;font-size:14px;line-height:1.6}.status.error{background:#fff0f0;color:#9b2222}
+.tablewrap{overflow:auto}table{width:100%;border-collapse:collapse;min-width:460px}th,td{text-align:right;padding:11px;border-bottom:1px solid var(--line)}th{background:#f4f7f7}td button{padding:6px 9px;font-size:12px}
+.count{color:var(--muted);font-size:13px;margin-right:6px}.foot{font-size:12px;color:var(--muted);text-align:center;margin:18px 0}
 </style>
 </head>
 <body>
-<main class="card">
-  <div class="monogram"><span><b>ن</b></span></div>
-  <h1>نزار عبدالفراج<br>إدريس ابراهيم</h1>
-  <div class="divider"><i></i><em></em><i></i></div>
+<main>
+<header class="hero">
+  <h1>قارئ QR للأسماء وأرقام الهواتف</h1>
+  <p>امسح رموز QR واحداً بعد الآخر، واجمع الاسم والرقم في جدول، ثم صدّر النتائج إلى ملف Excel.</p>
+</header>
 
-  <a class="row" href="https://wa.me/249912352632" target="_blank" rel="noopener">
-    <span class="ico"><svg viewBox="0 0 24 24"><path d="M12.04 2a9.9 9.9 0 0 0-8.4 15.1L2 22l5-1.6A9.9 9.9 0 1 0 12.04 2zm5.8 14c-.25.7-1.4 1.3-1.9 1.35-.5.05-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.65-4.1-.13-.2-1.1-1.45-1.1-2.8s.7-2 1-2.3c.25-.25.55-.3.75-.3h.55c.2 0 .4 0 .6.45.25.55.8 1.9.85 2 .05.1.1.25 0 .4-.1.2-.15.3-.3.45-.15.2-.3.35-.4.5-.15.15-.3.3-.15.6.15.3.7 1.15 1.5 1.85 1 .9 1.85 1.2 2.15 1.3.3.15.45.1.6-.1.2-.2.7-.8.9-1.1.2-.3.4-.25.65-.15.3.1 1.65.8 1.95.95.3.15.5.2.55.3.1.1.1.65-.15 1.35z"/></svg></span>
-    <span class="info"><small>واتساب</small><strong>0912352632</strong></span>
-  </a>
+<div class="grid">
+<section class="card">
+<h2>١. المسح بالكاميرا</h2>
+<div id="reader"></div>
+<div class="actions">
+<button class="primary" id="startBtn">تشغيل الكاميرا</button>
+<button class="secondary" id="stopBtn">إيقاف الكاميرا</button>
+</div>
+<p class="hint">قد يطلب المتصفح إذن استخدام الكاميرا. تعمل الكاميرا عادةً عبر HTTPS أو عند فتح الصفحة على localhost. وجّه الكاميرا إلى رمز QR واضح.</p>
+<div id="status" class="status" role="status">جاهز للمسح. يمكنك أيضاً إدخال محتوى QR يدوياً في القسم التالي.</div>
+</section>
 
-  <a class="row" href="mailto:neeeez66@gmail.com">
-    <span class="ico"><svg viewBox="0 0 24 24"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm9 7.2L4.5 7v.1L12 12.4 19.5 7.1V7L12 12.2zM4 9.2V17h16V9.2l-8 5.6-8-5.6z"/></svg></span>
-    <span class="info"><small>البريد الإلكتروني</small><strong>neeeez66@gmail.com</strong></span>
-  </a>
+<section class="card">
+<h2>٢. إدخال محتوى QR يدوياً</h2>
+<label for="qrText">النص الناتج من رمز QR</label>
+<textarea id="qrText" placeholder="مثال: الاسم: أحمد محمد&#10;الرقم: 0912345678"></textarea>
+<div class="actions"><button class="primary" id="addManual">استخراج الاسم والرقم وإضافة</button></div>
+<p class="hint">يدعم النصوص التي تحتوي على الاسم والرقم، وبيانات جهات الاتصال vCard، وJSON مثل: {"name":"أحمد","number":"0912345678"}.</p>
+<div class="row">
+<div><label for="nameInput">الاسم</label><input id="nameInput" placeholder="يمكن تعديله بعد الاستخراج"></div>
+<div><label for="numberInput">الرقم</label><input id="numberInput" inputmode="tel" placeholder="رقم الهاتف"></div>
+</div>
+<div class="actions"><button class="secondary" id="addFields">إضافة الحقول أعلاه</button></div>
+</section>
+</div>
 
-  <button class="save" id="saveBtn" type="button">
-    <svg viewBox="0 0 24 24"><path d="M15 12a4 4 0 1 0-4-4 4 4 0 0 0 4 4zm0 2c-2.7 0-8 1.3-8 4v2h16v-2c0-2.7-5.3-4-8-4zM5 10V7H3v3H0v2h3v3h2v-3h3v-2z" transform="translate(2 0)"/></svg>
-    حفظ جهة الاتصال
-  </button>
-  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+<section class="card" style="margin-top:16px">
+<div style="display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap">
+<h2 style="margin:0">٣. البيانات المجمعة <span class="count" id="count">(0 سجل)</span></h2>
+<div class="actions" style="margin:0">
+<button class="primary" id="exportBtn">تصدير إلى Excel (.xlsx)</button>
+<button class="secondary" id="csvBtn">تنزيل CSV</button>
+<button class="danger" id="clearBtn">مسح الكل</button>
+</div>
+</div>
+<p class="hint">يمكن تعديل أي اسم أو رقم داخل الجدول قبل التصدير. يتم حفظ البيانات مؤقتاً في هذه الصفحة فقط؛ صدّر الملف للاحتفاظ بنسخة.</p>
+<div class="tablewrap">
+<table><thead><tr><th>#</th><th>الاسم</th><th>الرقم</th><th>الإجراء</th></tr></thead><tbody id="tbody"><tr><td colspan="4" style="text-align:center;color:#637381">لا توجد بيانات حتى الآن.</td></tr></tbody></table>
+</div>
+</section>
+<p class="foot">تعمل الصفحة محلياً، لكن مكتبات قراءة QR وتصدير Excel تُحمّل من الإنترنت عند فتحها.</p>
 </main>
-
+<script src="https://unpkg.com/html5-qrcode@2.3.8/html5-qrcode.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
 <script>
-(function(){
-  var NAME = "نزار عبدالفراج إدريس ابراهيم";
-  var PHONE = "+249912352632";
-  var EMAIL = "neeeez66@gmail.com";
-
-  function buildVcf(){
-    return [
-      "BEGIN:VCARD",
-      "VERSION:3.0",
-      "N;CHARSET=UTF-8:ابراهيم;نزار;عبدالفراج إدريس;;",
-      "FN;CHARSET=UTF-8:" + NAME,
-      "TEL;TYPE=CELL,VOICE,WHATSAPP:" + PHONE,
-      "EMAIL;TYPE=INTERNET,WORK:" + EMAIL,
-      "END:VCARD"
-    ].join("\r\n");
+const records=[]; let scanner=null, scanning=false, lastText="", lastAt=0;
+const $=id=>document.getElementById(id);
+function setStatus(msg,error=false){$('status').textContent=msg;$('status').className='status'+(error?' error':'')}
+function extract(text){
+  const raw=String(text||'').trim(); if(!raw) return {name:'',number:''};
+  // JSON contact payloads
+  try { const o=JSON.parse(raw); if(o && typeof o==='object'){
+    const name=o.name||o.fullName||o.full_name||o.FN||o.nombre||'';
+    const number=o.number||o.phone||o.telephone||o.mobile||o.tel||o.TEL||'';
+    if(name||number)return {name:String(name).trim(),number:String(number).trim()};
+  }} catch(e){}
+  // vCard fields
+  let name='',number='';
+  const fn=raw.match(/(?:^|\n)\s*(?:FN|N)(?:;[^:]*)?:\s*([^\r\n]+)/i);
+  const tel=raw.match(/(?:^|\n)\s*TEL(?:;[^:]*)?:\s*([^\r\n]+)/i);
+  if(fn) name=fn[1].trim(); if(tel) number=tel[1].trim();
+  if(name||number)return {name,number};
+  const lines=raw.split(/\r?\n/).map(x=>x.trim()).filter(Boolean);
+  for(const line of lines){
+    const m=line.match(/^\s*(?:الاسم|اسم|name|full\s*name|الاسم الكامل)\s*[:：=\-]\s*(.+)$/i);
+    const n=line.match(/^\s*(?:الرقم|رقم الهاتف|الهاتف|phone|mobile|number|tel)\s*[:：=\-]\s*(.+)$/i);
+    if(m)name=m[1].trim(); if(n)number=n[1].trim();
   }
-
-  var toast = document.getElementById("toast"), timer;
-  function say(msg){
-    toast.textContent = msg; toast.classList.add("show");
-    clearTimeout(timer); timer = setTimeout(function(){ toast.classList.remove("show"); }, 3500);
+  if(!name||!number){
+    const joined=lines.join(' ');
+    const labeled=joined.match(/(?:الاسم|name)\s*[:：=]\s*([^,;|]+).*?(?:الرقم|phone|mobile|number|tel)\s*[:：=]\s*([+\d()\s.-]+)/i);
+    if(labeled){name=name||labeled[1].trim();number=number||labeled[2].trim();}
   }
-
-  document.getElementById("saveBtn").addEventListener("click", function(){
-    try{
-      var blob = new Blob([buildVcf()], {type:"text/vcard;charset=utf-8"});
-      var url = URL.createObjectURL(blob);
-      var a = document.createElement("a");
-      a.href = url; a.download = "naji-abdelfarag.vcf";
-      document.body.appendChild(a); a.click(); document.body.removeChild(a);
-      setTimeout(function(){ URL.revokeObjectURL(url); }, 2000);
-      say("تم تجهيز الملف — افتحه لإضافة جهة الاتصال");
-    }catch(e){
-      say("تعذّر حفظ جهة الاتصال، حاول مرة أخرى");
-    }
-  });
-})();
+  if(!name||!number){
+    // For a simple two-line QR, use first line as name and second as phone.
+    if(lines.length>=2){name=name||lines[0];number=number||lines.slice(1).find(x=>/[+\d][\d\s().-]{5,}/.test(x))||'';}
+    else if(lines.length===1 && /^(?:\+?[\d][\d\s().-]{5,})$/.test(lines[0])) number=lines[0];
+  }
+  return {name,number};
+}
+function addRecord(name,number){
+ name=String(name||'').trim(); number=String(number||'').trim();
+ if(!name&&!number){setStatus('لم أتمكن من العثور على الاسم أو الرقم. تأكد من محتوى QR أو أدخله يدوياً.',true);return false;}
+ if(number && records.some(r=>r.number===number && r.name===name)){setStatus('هذا السجل موجود بالفعل؛ لم تتم إضافته مرة أخرى.');return false;}
+ records.push({name,number}); render(); setStatus('تمت إضافة السجل بنجاح. يمكنك مسح رمز آخر.'); return true;
+}
+function render(){
+ $('count').textContent=`(${records.length} سجل)`;
+ const body=$('tbody'); body.innerHTML='';
+ if(!records.length){body.innerHTML='<tr><td colspan="4" style="text-align:center;color:#637381">لا توجد بيانات حتى الآن.</td></tr>';return;}
+ records.forEach((r,i)=>{
+  const tr=document.createElement('tr');
+  tr.innerHTML=`<td>${i+1}</td><td><input aria-label="الاسم" value="${escapeAttr(r.name)}"></td><td><input aria-label="الرقم" value="${escapeAttr(r.number)}" inputmode="tel"></td><td><button class="danger" type="button">حذف</button></td>`;
+  const inputs=tr.querySelectorAll('input'); inputs[0].addEventListener('change',e=>r.name=e.target.value.trim()); inputs[1].addEventListener('change',e=>r.number=e.target.value.trim());
+  tr.querySelector('button').addEventListener('click',()=>{records.splice(i,1);render();});body.appendChild(tr);
+ });
+}
+function escapeAttr(s){return String(s).replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+function processQR(decoded){
+ const now=Date.now(); if(decoded===lastText&&now-lastAt<2500)return; lastText=decoded;lastAt=now;
+ $('qrText').value=decoded; const d=extract(decoded);
+ $('nameInput').value=d.name; $('numberInput').value=d.number;
+ if(d.name||d.number){addRecord(d.name,d.number);}else{setStatus('تمت قراءة الرمز، لكن لم يُعثر على اسم ورقم واضحين. راجع النص في الحقل اليدوي.',true);}
+}
+$('startBtn').addEventListener('click',async()=>{
+ if(!window.Html5Qrcode){setStatus('تعذر تحميل مكتبة قارئ QR. تحقق من اتصال الإنترنت ثم أعد فتح الصفحة.',true);return;}
+ if(scanning)return;
+ try{
+  scanner=new Html5Qrcode('reader');
+  await scanner.start({facingMode:'environment'},{fps:10,qrbox:{width:240,height:240},aspectRatio:1.0},processQR,()=>{});
+  scanning=true;setStatus('الكاميرا تعمل. وجّهها إلى رمز QR.');
+ }catch(e){setStatus('تعذر تشغيل الكاميرا. امنح المتصفح الإذن، وتأكد من فتح الصفحة عبر HTTPS أو localhost. '+(e.message||''),true);}
+});
+$('stopBtn').addEventListener('click',async()=>{
+ if(scanner&&scanning){try{await scanner.stop();await scanner.clear();}catch(e){}scanning=false;setStatus('تم إيقاف الكاميرا.');}
+});
+$('addManual').addEventListener('click',()=>{
+ const raw=$('qrText').value;const d=extract(raw);
+ $('nameInput').value=d.name;$('numberInput').value=d.number;
+ if(!d.name&&!d.number){setStatus('لم يتم العثور على اسم أو رقم. يمكنك إدخالهما في الحقول أدناه.',true);return;}
+ addRecord(d.name,d.number);
+});
+$('addFields').addEventListener('click',()=>addRecord($('nameInput').value,$('numberInput').value));
+function exportRows(){return records.map((r,i)=>({'م':i+1,'الاسم':r.name,'الرقم':r.number}));}
+$('exportBtn').addEventListener('click',()=>{
+ if(!records.length){setStatus('لا توجد سجلات لتصديرها.',true);return;}
+ if(!window.XLSX){setStatus('تعذر تحميل مكتبة Excel. تحقق من اتصال الإنترنت.',true);return;}
+ const ws=XLSX.utils.json_to_sheet(exportRows());ws['!cols']=[{wch:8},{wch:30},{wch:24}];
+ const wb=XLSX.utils.book_new();XLSX.utils.book_append_sheet(wb,ws,'الأسماء والأرقام');
+ XLSX.writeFile(wb,'الاسماء_والارقام.xlsx');setStatus('تم تجهيز ملف Excel للتنزيل.');
+});
+$('csvBtn').addEventListener('click',()=>{
+ if(!records.length){setStatus('لا توجد سجلات لتصديرها.',true);return;}
+ const rows=[['م','الاسم','الرقم'],...records.map((r,i)=>[i+1,r.name,r.number])];
+ const csv='\uFEFF'+rows.map(row=>row.map(v=>'"'+String(v??'').replace(/"/g,'""')+'"').join(',')).join('\r\n');
+ const blob=new Blob([csv],{type:'text/csv;charset=utf-8;'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='الاسماء_والارقام.csv';a.click();URL.revokeObjectURL(a.href);setStatus('تم تنزيل ملف CSV.');
+});
+$('clearBtn').addEventListener('click',()=>{if(confirm('هل تريد مسح جميع السجلات؟')){records.splice(0);render();setStatus('تم مسح السجلات من الجدول.');}});
 </script>
 </body>
-</html>
-
+  </html>
